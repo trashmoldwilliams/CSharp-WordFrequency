@@ -15,5 +15,13 @@ namespace WordFrequencyFinderTest
       string testWord = "orange";
       Assert.Equal(0, RepeatCounter.CountRepeats(testPhrase, testWord));
     }
+
+    [Fact]
+    public void CountRepeats_CheckAppleInApple_0()
+    {
+      string testPhrase = "apple";
+      string testWord = "apple";
+      Assert.Equal(1, RepeatCounter.CountRepeats(testPhrase, testWord));
+    }
   }
 }
