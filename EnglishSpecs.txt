@@ -1,0 +1,96 @@
+If the phrase input is "apple", and the check input is "orange", then the output is 0.
+This is the simplest test as it doesn't require splitting up a phrase into multiple strings,
+it is just a check if two strings do not match.
+
+If the phrase input is "apple", and the check input is "apple", then the output is 1.
+This is the simplest test as it doesn't require splitting up a phrase into multiple strings,
+it is just a check if two strings are identical, and to add an int value on a sucessful check.
+
+If the phrase input is "apple apple", and the check input is "apple", then the output is 2.
+This is a more complex test, but is the next simplest step, there will need to be a system
+in place for splitting the input phrase into a string array, and a loop to run the existing
+code on each individual word, and output the overall score.
+
+If the phrase input is "apple orange apple", and the check input is "apple", then the output is 2.
+This would just be another test without any additional code, as what will exist at this point
+should ignore a non matching word and refrain from adding a point for "orange".
+
+If the phrase input is "ApPlE", and the check input is "aPpLe", then the output is 1.
+This is an additional test for building a system to ignore case on both sides of the comparison,
+strings of alternating case, but identical characters should still count as a match.
+
+If the phrase input is "This is an apple.", and the check input is "apple", then the output is 1.
+This is an additional check for making partial matches when punctuation
+(".", ",", """, "'", ";", "()", "{}", "[]", "<>", "?", "!", ":") is concerned, as
+"apple." isn't technically a match with "apple", but it should still count.
+
+If the phrase input is "Apple, this is.", and the check input is "apple", then the output is 1.
+This is an additional check for making partial matches when punctuation
+(".", ",", """, "'", ";", "()", "{}", "[]", "<>", "?", "!", ":") is concerned, as
+"apple," isn't technically a match with "apple", but it should still count.
+
+If the phrase input is "This is an ""apple"", and the check input is "apple", then the output is 1.
+This is an additional check for making partial matches when punctuation
+(".", ",", """, "'", ";", "()", "{}", "[]", "<>", "?", "!", ":") is concerned, as
+""apple"" isn't technically a match with "apple", but it should still count.
+
+If the phrase input is "This is an "'apple'", and the check input is "apple", then the output is 1.
+This is an additional check for making partial matches when punctuation
+(".", ",", """, "'", ";", "()", "{}", "[]", "<>", "?", "!", ":") is concerned, as
+"'apple'" isn't technically a match with "apple", but it should still count.
+
+If the phrase input is "I want an apple; however, they are rare.", and the check input is "apple", then the output is 1.
+This is an additional check for making partial matches when punctuation
+(".", ",", """, "'", ";", "()", "{}", "[]", "<>", "?", "!", ":") is concerned, as
+"apple;" isn't technically a match with "apple", but it should still count.
+
+If the phrase input is "Examples of fruit (apple , orange , pear)", and the check input is "apple", then the output is 1.
+This is an additional check for making partial matches when punctuation
+(".", ",", """, "'", ";", "()", "{}", "[]", "<>", "?", "!", ":") is concerned, as
+"(apple" isn't technically a match with "apple", but it should still count.
+
+If the phrase input is "Examples of fruit {apple , orange , pear}", and the check input is "apple", then the output is 1.
+This is an additional check for making partial matches when punctuation
+(".", ",", """, "'", ";", "()", "{}", "[]", "<>", "?", "!", ":") is concerned, as
+"{apple" isn't technically a match with "apple", but it should still count.
+
+If the phrase input is "Examples of fruit [apple , orange , pear]", and the check input is "apple", then the output is 1.
+This is an additional check for making partial matches when punctuation
+(".", ",", """, "'", ";", "()", "{}", "[]", "<>", "?", "!", ":") is concerned, as
+"[apple" isn't technically a match with "apple", but it should still count.
+
+If the phrase input is "Examples of fruit <apple , orange , pear>", and the check input is "apple", then the output is 1.
+This is an additional check for making partial matches when punctuation
+(".", ",", """, "'", ";", "()", "{}", "[]", "<>", "?", "!", ":") is concerned, as
+"<apple" isn't technically a match with "apple", but it should still count.
+
+If the phrase input is "Can I have that apple?", and the check input is "apple", then the output is 1.
+This is an additional check for making partial matches when punctuation
+(".", ",", """, "'", ";", "()", "{}", "[]", "<>", "?", "!", ":") is concerned, as
+"apple?" isn't technically a match with "apple", but it should still count.
+
+If the phrase input is "Give me that apple!", and the check input is "apple", then the output is 1.
+This is an additional check for making partial matches when punctuation
+(".", ",", """, "'", ";", "()", "{}", "[]", "<>", "?", "!", ":") is concerned, as
+"apple!" isn't technically a match with "apple", but it should still count.
+
+If the phrase input is "Apple: 5 Dollars", and the check input is "apple", then the output is 1.
+This is an additional check for making partial matches when punctuation
+(".", ",", """, "'", ";", "()", "{}", "[]", "<>", "?", "!", ":") is concerned, as
+"Apple:" isn't technically a match with "apple", but it should still count.
+
+If the phrase input is "This is a Snapple", and the check input is "apple", then the output is 0.
+This is a counter test for the addition of a partial tester, as the partial tester should
+only apply when concerning punctuation, but should not count a substring of a word as a match.
+
+
+If the phrase input is
+
+"Apples were brought to North America by colonists in the 17th century, and the first apple
+orchard on the North American continent was planted in Boston by Reverend William Blaxton in 1625.
+The only apples native to North America are crab apples, which were once called "common apples".
+Apple varieties brought as seed from Europe were spread along Native American trade routes, as well as being cultivated on Colonial farms. An 1845 United States apples nursery catalogue
+sold 350 of the "best" varieties, showing the proliferation of new North American varieties by the early 19th century.",
+
+ and the check input is "apples", then the output is 3. This is a final test to see if the program
+ can assess the correct value from a random article.
