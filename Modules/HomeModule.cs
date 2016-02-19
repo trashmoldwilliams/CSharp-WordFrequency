@@ -9,7 +9,17 @@ namespace WordFrequencyFinder
   {
     public HomeModule()
     {
-    Get["/"] = _ => View["index.cshtml"];
+
+      Get["/"] = _ =>
+      {
+        int model = 0;
+        return View["index.cshtml", model];
+      };
+
+      Post["/"] = _ =>
+      {
+        return View["index.cshtml", RepeatCounter.CountRepeats(Request.Form["phrase"], Request.Form["word"])];
+      };
     }
   }
 }
