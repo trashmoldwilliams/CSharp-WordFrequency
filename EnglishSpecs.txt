@@ -24,7 +24,7 @@ This is an additional check for making partial matches when punctuation
 (".", ",", """, "'", ";", "()", "{}", "[]", "<>", "?", "!", ":") is concerned, as
 "apple." isn't technically a match with "apple", but it should still count.
 
-If the phrase input is "Apple, this is.", and the check input is "apple", then the output is 1.
+If the phrase input is "apple, this is.", and the check input is "apple", then the output is 1.
 This is an additional check for making partial matches when punctuation
 (".", ",", """, "'", ";", "()", "{}", "[]", "<>", "?", "!", ":") is concerned, as
 "apple," isn't technically a match with "apple", but it should still count.
@@ -74,7 +74,7 @@ This is an additional check for making partial matches when punctuation
 (".", ",", """, "'", ";", "()", "{}", "[]", "<>", "?", "!", ":") is concerned, as
 "apple!" isn't technically a match with "apple", but it should still count.
 
-If the phrase input is "Apple: 5 Dollars", and the check input is "apple", then the output is 1.
+If the phrase input is "apple: 5 Dollars", and the check input is "apple", then the output is 1.
 This is an additional check for making partial matches when punctuation
 (".", ",", """, "'", ";", "()", "{}", "[]", "<>", "?", "!", ":") is concerned, as
 "Apple:" isn't technically a match with "apple", but it should still count.
