@@ -12,7 +12,7 @@ namespace WordFrequencyFinder
 
       for (var i = 0; i < phraseArray.Length; i++)
       {
-        if (phraseArray[i] == word)
+        if (phraseArray[i].ToLower() == word.ToLower())
         {
           repeatCount += 1;
         }
