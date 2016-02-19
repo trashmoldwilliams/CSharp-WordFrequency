@@ -8,10 +8,14 @@ namespace WordFrequencyFinder
     public static int CountRepeats(string phrase, string word)
     {
       int repeatCount = 0;
+      string[] phraseArray = phrase.Split(' ');
 
-      if (phrase == word)
+      for (var i = 0; i < phraseArray.Length; i++)
       {
-        repeatCount += 1;
+        if (phraseArray[i] == word)
+        {
+          repeatCount += 1;
+        }
       }
 
       return repeatCount;
