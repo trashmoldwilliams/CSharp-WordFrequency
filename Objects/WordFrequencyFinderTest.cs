@@ -9,9 +9,11 @@ namespace WordFrequencyFinderTest
   public class WordFrequencyFinderTester
   {
     [Fact]
-    public void NamingConvention()
+    public void CountRepeats_CheckOrangeInApple_0()
     {
-      Assert.Equal("Equal", "Equal");
+      string testPhrase = "apple";
+      string testWord = "orange";
+      Assert.Equal(0, RepeatCounter.CountRepeats(testPhrase, testWord));
     }
   }
 }
