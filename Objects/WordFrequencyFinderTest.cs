@@ -135,5 +135,13 @@ namespace WordFrequencyFinderTest
       string testWord = "apple";
       Assert.Equal(1, RepeatCounter.CountRepeats(testPhrase, testWord));
     }
+
+    [Fact]
+    public void CountRepeats_TestLargeArticleAccuracy_3()
+    {
+      string testPhrase = "Apples were brought to North America by colonists in the 17th century, and the first apple orchard on the North American continent was planted in Boston by Reverend William Blaxton in 1625. The only apples native to North America are crab apples, which were once called \"common apples\". Apple varieties brought as seed from Europe were spread along Native American trade routes, as well as being cultivated on Colonial farms. An 1845 United States apples nursery catalogue sold 350 of the \"best\" varieties, showing the proliferation of new North American varieties by the early 19th century.";
+      string testWord = "apples";
+      Assert.Equal(5, RepeatCounter.CountRepeats(testPhrase, testWord));
+    }
   }
 }
