@@ -5,14 +5,24 @@ namespace WordFrequencyFinder
   public class RepeatCounter
   {
 
-    public static int CountRepeats(string phrase, string word)
+    public static int CountRepeats(string inputPhrase, string inputWord)
     {
       int repeatCount = 0;
-      string[] phraseArray = phrase.Split(' ');
+      string[] phraseArray = inputPhrase.Split(' ');
 
-      for (var i = 0; i < phraseArray.Length; i++)
+      for(var i = 0; i < phraseArray.Length; i++)
       {
-        if (phraseArray[i].ToLower() == word.ToLower())
+        string checkWord = "";
+
+        foreach (char letter in phraseArray[i])
+        {
+          if(!char.IsPunctuation(letter))
+          {
+            checkWord += letter;
+          }
+        }
+
+        if (checkWord.ToLower() == inputWord.ToLower())
         {
           repeatCount += 1;
         }

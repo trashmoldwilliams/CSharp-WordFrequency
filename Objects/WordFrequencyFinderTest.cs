@@ -47,5 +47,13 @@ namespace WordFrequencyFinderTest
       string testWord = "aPpLe";
       Assert.Equal(1, RepeatCounter.CountRepeats(testPhrase, testWord));
     }
+
+    [Fact]
+    public void CountRepeats_IgnorePeriods_1()
+    {
+      string testPhrase = "This is an apple.";
+      string testWord = "apple";
+      Assert.Equal(1, RepeatCounter.CountRepeats(testPhrase, testWord));
+    }
   }
 }
