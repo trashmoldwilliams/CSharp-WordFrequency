@@ -1,5 +1,5 @@
 <h1>Word Frequency Counter</h1>
-<form action="/" method="post">
+<form action="/results" method="post">
   <label for="phrase">Phrase to be checked:</label>
   <br>
   <textarea rows="5" cols="80" type="text" name="phrase"></textarea>
@@ -9,8 +9,3 @@
   <br><br>
   <button type="submit" name="button">Submit</button>
 </form>
-
-@if (@Model != 0)
-{
-  <p>This word is in the phrase @Model times!</p>
-}

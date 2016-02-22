@@ -12,13 +12,12 @@ namespace WordFrequencyFinder
 
       Get["/"] = _ =>
       {
-        int model = 0;
-        return View["index.cshtml", model];
+        return View["index.cshtml"];
       };
 
-      Post["/"] = _ =>
+      Post["/results"] = _ =>
       {
-        return View["index.cshtml", RepeatCounter.CountRepeats(Request.Form["phrase"], Request.Form["word"])];
+        return View["results.cshtml", RepeatCounter.CountRepeats(Request.Form["phrase"], Request.Form["word"])];
       };
     }
   }
